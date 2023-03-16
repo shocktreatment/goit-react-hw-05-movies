@@ -25,19 +25,23 @@ const Reviews = () => {
     };
     fetchReview();
   }, [id]);
+
+  const elements = reviews.map(({ id, author, content }) => (
+    <li key={id}>
+      <h3>
+        <b>Author: {author}</b>
+      </h3>
+      <p>{content}</p>
+    </li>
+  ));
   return (
     <>
-      <h2>REVIEWS</h2>
-      <ul>
-        {reviews.map(({ id, author, content }) => (
-          <li key={id}>
-            <h3>
-              <b>Author: {author}</b>
-            </h3>
-            <p>{content}</p>
-          </li>
-        ))}
-      </ul>
+      {/* <h2>REVIEWS</h2> */}
+      {!reviews ? (
+        <ul>{elements}</ul>
+      ) : (
+        <p>We don`t have any reviews for this movie.</p>
+      )}
     </>
   );
 };
