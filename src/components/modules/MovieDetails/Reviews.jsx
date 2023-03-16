@@ -37,11 +37,8 @@ const Reviews = () => {
   return (
     <>
       {/* <h2>REVIEWS</h2> */}
-      {!reviews ? (
-        <ul>{elements}</ul>
-      ) : (
-        <p>We don`t have any reviews for this movie.</p>
-      )}
+      {Boolean(!reviews.length)  && <p>We don`t have any reviews for this movie.</p>}
+      <ul>{elements}</ul>
     </>
   );
 };
