@@ -19,7 +19,7 @@ const HomePage = () => {
 
   return (
     <>
-      <h1>HOME</h1>
+      <h1>Trending today</h1>
       {post && (
         <ul>
           {post.map(({ id, title }) => (

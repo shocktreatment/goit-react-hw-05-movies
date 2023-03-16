@@ -48,7 +48,7 @@ const MoviesPage = () => {
 
   return (
     <>
-      <h1>MOVIES</h1>
+      {/* <h1>MOVIES</h1> */}
       <SearchBar onSubmit={searchPost} />
       <ul>{elements}</ul>
     </>
